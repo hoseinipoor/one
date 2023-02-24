@@ -18,5 +18,3 @@ while discount_percent<0 or discount_percent>100 :
 discount_value = discount_calc(price,discount_percent)
 #print result 
 print(f'discount value is {int(discount_value)} tomans')
-print('-----'*10)
-print('-----'*10)
