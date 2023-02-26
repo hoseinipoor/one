@@ -1,20 +1,19 @@
-#define function
-def discount_calc(price,discount_percent):
-    #calculate discount
-    discount_value = price*discount_percent/100
-    return discount_value
+# Write a Python function to find the maximum of three numbers
+def find_max(a,b,c):
+    if a>b :
+        if a>c :
+            return a
+        else : #a<=c
+            return c
+    else : # a<=b
+        if b>c :
+            return b
+        else: # b<=c
+            return c
+num1 = float(input('Enter number1: '))
+num2 = float(input('Enter number2: '))
+num3 = float(input('Enter number3: '))
 
-#get price
-price = int(input('Enter price(toman): '))
-while price<0 :
-    price = int(input('price shouldn\'t be negative ,Enter price again: '))
-    
-#get discount_percent
-discount_percent = int(input('Enter discount_percent(between 0 and 100): '))
-while discount_percent<0 or discount_percent>100 :
-    discount_percent = int(input('discount_percent should be between 0 and 100 ,Enter discount percent again: '))
-
-#call function 
-discount_value = discount_calc(price,discount_percent)
-#print result 
-print(f'discount value is {int(discount_value)} tomans')
+max_value  = find_max(num1,num2,num3) 
+print(f'maximum value is {max_value}')
+        
