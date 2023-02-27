@@ -1,2 +1,2 @@
 #  This is my heading
-** This is italic 
+**This is italic  
