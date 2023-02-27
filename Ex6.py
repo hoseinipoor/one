@@ -1,19 +1,13 @@
-# Write a Python function to calculate the factorial of a number
-def factorial_func(number):
-    if number == 0:
-        return 1
-    
-    factorial_val =1
-    for i in range(2,number+1):
-        factorial_val *= i
-    return factorial_val
+# Write a Python function to check whether a number falls within a given range
+def check_func(number,down_rang,up_rang):
 
+    return number>down_rang and number<up_rang
+        
 
-number = int(input('Enter number: '))
-while number<0 :
-    number = int(input('number should be non negative ,Enter number again: '))
+number = float(input('Enter number: '))
+down_rang =  float(input('Enter down range: '))
+up_rang =  float(input('Enter up range: '))
 
-factorial_val=factorial_func(number)
-print(f'factorial value is {factorial_val}')
-
+result=check_func(number,down_rang,up_rang)
+print(result)
 

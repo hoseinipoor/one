@@ -1,19 +1,18 @@
-# Write a Python function to find the maximum of three numbers
-def find_max(a,b,c):
-    if a>b :
-        if a>c :
-            return a
-        else : #a<=c
-            return c
-    else : # a<=b
-        if b>c :
-            return b
-        else: # b<=c
-            return c
-num1 = float(input('Enter number1: '))
-num2 = float(input('Enter number2: '))
-num3 = float(input('Enter number3: '))
+#Write a Python function to sum all the numbers in a list
+#based on question,input is a list 
+def sum_func(input_list):
+    sum_value = 0
+    for num in input_list:
+        sum_value  += num 
+    return sum_value
 
-max_value  = find_max(num1,num2,num3) 
-print(f'maximum value is {max_value}')
-        
+
+N = int(input('How many numbers should be sum: '))
+numbers = []
+for i in range(N):
+    num = float(input(f'Enter {i+1}th number:'))
+    numbers.append(num)
+
+result = sum_func(numbers)
+print(f'sum value is {result}')
+
