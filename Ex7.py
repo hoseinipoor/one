@@ -1,13 +1,21 @@
-# Write a Python function to check whether a number falls within a given range
-def check_func(number,down_rang,up_rang):
+# Write a Python function that accepts a string and counts the number of upper and lower case letters
+def count_upper_lower(input_string):
+    up = 0
+    low = 0
+    for character in input_string:
+        if character.isupper():
+            up += 1
+        elif character.islower():
+            low += 1
+    
+    return up,low
+    
 
-    return number>down_rang and number<up_rang
-        
 
-number = float(input('Enter number: '))
-down_rang =  float(input('Enter down range: '))
-up_rang =  float(input('Enter up range: '))
+input_string = input('Enter string: ')
 
-result=check_func(number,down_rang,up_rang)
-print(result)
+up_count,low_count=count_upper_lower(input_string)
+
+print(f'number of uppercase are {up_count} and lowercase are {low_count}')
+
 
